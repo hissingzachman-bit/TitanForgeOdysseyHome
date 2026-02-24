@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TitanForge Odyssey</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #0b0b0e;
+        color: #e6e6e6;
+        scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 90vh;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4), #0b0b0e),
+     url('https://image2url.com/r2/default/images/1771892538057-5706afb2-df9f-4f0e-b86f-db2deeda0561.png') center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+        color: #ff7b00;
+        text-shadow: 0 0 20px #ff7b00;
+        margin: 0;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        opacity: 0.9;
+    }
+
+    .btn {
+        margin-top: 25px;
+        padding: 15px 35px;
+        background: #ff7b00;
+        color: #0b0b0e;
+        font-weight: bold;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        box-shadow: 0 0 15px #ff7b00;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #ffa64d;
+        box-shadow: 0 0 25px #ffa64d;
+    }
+
+    /* Sections */
+    section {
+        padding: 80px 10%;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        color: #ff7b00;
+        text-shadow: 0 0 10px #ff7b00;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        opacity: 0.9;
+    }
+
+    /* Gallery */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(255,123,0,0.4);
+        transition: 0.2s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 25px rgba(255,123,0,0.7);
+    }
+
+    /* FAQ */
+    .faq-item {
+        margin-bottom: 15px;
+        background: #141418;
+        padding: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        border-left: 4px solid #ff7b00;
+    }
+
+    .faq-item h3 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .faq-item p {
+        display: none;
+        margin-top: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        opacity: 0.6;
+        font-size: 0.9rem;
+    }
+</style>
+
+<script>
+    // FAQ Toggle
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".faq-item").forEach(item => {
+            item.addEventListener("click", () => {
+                const p = item.querySelector("p");
+                p.style.display = p.style.display === "block" ? "none" : "block";
+            });
+        });
+    });
+</script>
+
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>TitanForge Odyssey</h1>
+    <p>A cinematic exploration & boss‑focused Minecraft modpack forged for adventurers, builders, and conquerors.</p>
+    <a href="#download" class="btn">Download Now</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About the Modpack</h2>
+    <p>
+        TitanForge Odyssey is a NeoForge 1.21.1 modpack built for players who crave 
+        **vanilla‑faithful gameplay**, **cinematic boss encounters**, and **clean, satisfying automation** 
+        without intrusive tech clutter. Every system is crafted to feel like a natural extension of Minecraft’s world(note not finished).
+    </p>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40iN3oiD7lVY1NawmBTwicmcsIZkSxfFJtQ&s"> <!-- might want to change this image-->
+    </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download">
+    <h2>Download</h2>
+    <p>Get the latest version of TitanForge Odyssey on CurseForge.</p>
+    <a class="btn" href="https://drive.google.com/uc?export=download&id=1y7xEtxwqt_D_lvOfMGaNMNabex8ogC5O" download>Download TitanForge Odyssey</a>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+        <h3>What version of Minecraft does it use?</h3>
+        <p>TitanForge Odyssey runs on **NeoForge 1.21.1**.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Does it keep a vanilla feel?</h3>
+        <p>Yes — everything is designed to feel like a natural extension of vanilla with more that enough mods.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Are there tech mods?</h3>
+        <p>Only clean, non‑intrusive automation systems that fit the world’s aesthetic.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Is it multiplayer‑friendly?</h3>
+        <p>Absolutely — the pack is optimized for both solo and server play, it has E4MC installed.</p>
+    </div>
+ <div class="faq-item">
+    <h3>Is it Finished</h3>
+    <p>Not yet, it is still in Beta, I am currently creating a finale and the quests/more config.</p>
+    </div>
+ <div class="faq-item">
+     <h3>Is it Finished</h3>
+    <p>Not yet, it is still in Beta, I am currently creating a finale and the quests/more config.</p>
+        </div>
+            </div>
+
+</section>
+
+<footer>
+    © 2026 TitanForge Odyssey
+</footer>
+
+</body>
+</html>
